@@ -42,3 +42,28 @@ The framework will consist of the following components:
 The U.S. financial system increasingly relies on algorithmic decision-making tools to evaluate creditworthiness, manage lending risk, and optimize operational efficiency. However, the absence of standardized implementation frameworks for AI governance exposes institutions to systemic bias, regulatory enforcement actions, reputational damage, and economic instability.
 
 This project addresses a nationally relevant problem by operationalizing federal AI governance standards within critical financial infrastructure. Given the scale of automated lending systems and their impact on consumer access to credit, employment mobility, and economic participation, strengthening algorithmic integrity directly supports national economic resilience and consumer protection priorities.
+---
+
+## Methodology
+
+The implementation of this framework will follow a structured multi-phase approach:
+
+### Phase 1 – Risk Mapping & Variable Analysis
+- Identification of input variables commonly used in automated credit scoring systems
+- Proxy risk evaluation
+- Regulatory exposure classification
+
+### Phase 2 – Fairness & Bias Quantification
+- Statistical disparity measurement modeling
+- Threshold definition for acceptable variance
+- Simulation of outcome distribution shifts
+
+### Phase 3 – Governance Control Structuring
+- Mapping NIST AI RMF principles into operational control checkpoints
+- Creation of documentation templates for institutional audit readiness
+- Definition of accountability roles and review cycles
+
+### Phase 4 – Monitoring & Continuous Improvement
+- Development of periodic bias audit protocols
+- Risk scoring update logic
+- Governance reporting structure
