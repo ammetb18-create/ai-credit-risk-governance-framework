@@ -2,273 +2,214 @@
 **AI Credit Risk Governance Framework**  
 Version: 1.0  
 Status: Active  
-Owner: Independent Model Validation (IMV)  
-Last Updated: 2026-03-02  
+Owner: Independent Model Risk Management (MRM)  
+Last Updated: 2026-03-03  
 
 ---
 
 # 1. Purpose
 
-This document defines the independent validation standards, procedures, and governance requirements for AI/ML models used in credit risk decisioning.
+This framework defines the independent validation standards for AI/ML models used in credit decision systems within regulated financial institutions.
 
-This framework ensures:
+It aligns with:
 
-- Regulatory compliance (SR 11-7)
-- Independent model challenge
-- Performance robustness
-- Fairness and bias verification
-- Ongoing monitoring and revalidation
-
-Aligned with:
-
-- NIST AI Risk Management Framework (Measure & Manage)
 - SR 11-7 Model Risk Management Guidance
-- OCC / Federal Reserve supervisory expectations
-- Fair Lending regulations
+- OCC Supervisory Guidance
+- Federal Reserve Model Risk Standards
+- NIST AI Risk Management Framework (Measure & Manage)
+- Enterprise Risk Governance Practices
+
+The objective is to ensure that AI models are:
+
+- Conceptually sound
+- Empirically validated
+- Fair and compliant
+- Operationally robust
+- Continuously monitored
 
 ---
 
-# 2. Validation Independence
+# 2. Validation Independence Requirement
 
-Validation must be performed by a function independent from:
+All Tier 1 and Tier 2 credit AI models must undergo independent validation separate from model development.
 
-- Model development team
-- Data engineering team
-- Business sponsor
+Validator responsibilities must include:
 
-The validation function must report to:
-
-- Chief Risk Officer (CRO)  
-OR  
-- Model Risk Committee  
+- Review of development documentation
+- Replication of model results
+- Fair lending testing verification
+- Challenge of assumptions
+- Review of governance controls
 
 ---
 
-# 3. Validation Scope
+# 3. Conceptual Soundness Review
 
 Validation must assess:
 
-1. Conceptual Soundness  
-2. Data Integrity  
-3. Methodology Appropriateness  
-4. Model Performance  
-5. Fairness & Bias  
-6. Implementation Controls  
-7. Ongoing Monitoring Design  
-
----
-
-# 4. Conceptual Soundness Review
-
-Validation must assess:
-
-- Business problem definition clarity
-- Theoretical justification of model approach
+- Model objective alignment with business purpose
 - Feature selection rationale
-- Assumption transparency
-- Documentation completeness
+- Theoretical justification of variables
+- Treatment of missing data
+- Handling of outliers
+- Model architecture justification (e.g., logistic regression, gradient boosting, neural networks)
 
-Checklist:
-
-- Clear objective statement
-- Justified model choice (e.g., logistic regression, XGBoost, NN)
-- Feature economic logic explained
-- Limitations documented
+Required Output:
+- Conceptual Soundness Report
+- Identified model design weaknesses
+- Recommendations for remediation
 
 ---
 
-# 5. Data Validation
+# 4. Data Validation Controls
 
 Validation must confirm:
 
-- Training dataset integrity
 - Data lineage traceability
-- Missing data handling methodology
-- Outlier treatment documentation
-- Sampling bias assessment
-- Temporal stability
+- Training/validation/test dataset separation
+- Sampling methodology integrity
+- Absence of data leakage
+- Bias in historical data
 
-Required Testing:
+Testing must include:
 
-- Data distribution comparison (train vs validation)
-- Population Stability Index (PSI)
-- Missingness pattern analysis
-
----
-
-# 6. Methodology Assessment
-
-Validation must review:
-
-- Algorithm selection appropriateness
-- Hyperparameter tuning transparency
-- Overfitting controls
-- Cross-validation methodology
-- Feature leakage prevention
-
-High-complexity models require enhanced documentation and explainability.
+- Distribution comparison
+- Stability index testing (PSI)
+- Missing value pattern analysis
 
 ---
 
-# 7. Performance Testing
+# 5. Performance Validation
 
-Minimum required performance metrics:
+Minimum required performance evaluation:
 
-- AUC-ROC
+- AUC / ROC
 - KS Statistic
-- Gini Coefficient
 - Precision / Recall
-- Calibration analysis
+- Gini coefficient
+- Calibration curves
+- Backtesting
 
-Additional Requirements:
+Stress Testing Requirements:
 
-- Benchmark comparison
-- Stress testing under adverse economic scenarios
-- Sensitivity analysis
-
-Performance thresholds must be pre-defined.
+- Macroeconomic shock scenario
+- Segment-specific stress (income, geography)
+- Portfolio shift simulation
 
 ---
 
-# 8. Fairness & Bias Validation
+# 6. Fairness Verification
 
-Validation must independently verify:
+Validation must independently confirm:
 
-- Disparate impact testing
-- Proxy variable assessment
-- Adverse action explanation logic
+- Disparate impact analysis
+- Proxy testing methodology
+- Feature-level fairness review
 - Stability of fairness metrics over time
 
-Any threshold breach requires documented remediation before deployment.
+Escalation required if:
+
+- AIR < 0.80 without documented business necessity
+- Persistent demographic pricing differential
+- Unexplained approval disparities
 
 ---
 
-# 9. Implementation & Controls Review
+# 7. Explainability Review
 
-Validation must assess:
+Validator must confirm:
 
-- Code version control integrity
-- Deployment environment consistency
-- Access controls
-- Change management process
-- Model reproducibility testing
-
-Reproduction test:
-
-Validator must independently reproduce model outputs from raw data.
+- Availability of SHAP/LIME or equivalent interpretability
+- Stability of feature importance rankings
+- Traceable adverse action reason codes
+- Consumer-compliant explanation capability
 
 ---
 
-# 10. Ongoing Monitoring Framework Review
+# 8. Model Risk Rating Assignment
 
-Validation must confirm existence of:
+Each validated model must receive a Model Risk Rating:
 
-- Performance monitoring dashboard
-- Drift detection controls
-- Fairness monitoring schedule
-- Alert thresholds
-- Escalation workflow
+| Rating | Description |
+|--------|------------|
+| Low | Limited financial or regulatory exposure |
+| Moderate | Moderate consumer impact |
+| High | Significant financial or compliance exposure |
+| Critical | Direct credit decision with systemic regulatory risk |
 
-Monitoring controls must align with:
-
-AI_Credit_Risk_Scoring_Matrix_v1.md
-
----
-
-# 11. Validation Outcomes
-
-Each validation must conclude with:
-
-- Validation rating:
-  - Approved
-  - Approved with Conditions
-  - Rejected
-
-- Identified findings:
-  - High severity
-  - Moderate severity
-  - Low severity
-
-- Required remediation plan
-- Executive sign-off
+Risk rating must align with the Risk Scoring Matrix.
 
 ---
 
-# 12. Revalidation Requirements
+# 9. Ongoing Monitoring Requirements
 
-| Risk Tier | Revalidation Frequency |
-|------------|----------------------|
-| Tier 1 (Critical) | Annual |
-| Tier 2 (High) | Annual |
-| Tier 3 (Moderate) | Every 2 Years |
-| Tier 4 (Low) | As needed |
+Post-validation monitoring must include:
 
-Immediate revalidation required if:
+- Performance drift detection
+- Population Stability Index tracking
+- Fairness metric monitoring
+- Threshold breach alerts
+- Retraining trigger thresholds
 
-- Model retrained
-- Major data source change
-- Regulatory update
-- Fairness incident
+Monitoring Frequency:
+
+| Risk Tier | Monitoring |
+|-----------|-----------|
+| Tier 1 | Monthly |
+| Tier 2 | Quarterly |
+| Tier 3 | Semi-Annual |
+| Tier 4 | Annual |
 
 ---
 
-# 13. Model Validation Report Structure
+# 10. Validation Documentation Requirements
 
-Each validation report must include:
+Each validation cycle must produce:
 
-1. Executive Summary
-2. Model Overview
-3. Data Assessment
-4. Methodology Review
-5. Performance Results
-6. Fairness Testing Results
-7. Implementation Controls Review
-8. Monitoring Assessment
-9. Findings & Recommendations
-10. Final Determination
+- Validation Executive Summary
+- Technical Validation Report
+- Fairness Verification Appendix
+- Stress Testing Results
+- Remediation Tracking Log
+- Governance Approval Record
 
-Reports must be stored in:
+All validation documentation must be stored in:
 
 /validation-reports/
 
 ---
 
-# 14. Governance Escalation
+# 11. Escalation & Remediation
 
-If validation rating = Rejected:
+If material weaknesses are identified:
 
-- Immediate deployment freeze
-- Governance Committee notification
-- Executive Risk Report
-- Remediation plan within 30 days
+- Deployment freeze (if pre-production)
+- Governance committee escalation
+- Mandatory remediation plan
+- Timeline approval
+- Re-validation after remediation
 
 ---
 
-# 15. Alignment to NIST AI RMF
+# 12. Alignment to NIST AI RMF
 
 | AI RMF Function | Implementation |
 |-----------------|---------------|
-| Govern | Independent validation oversight |
-| Map | Model purpose clarity |
-| Measure | Performance & fairness testing |
-| Manage | Remediation & monitoring controls |
+| Govern | Independent oversight |
+| Map | Model risk identification |
+| Measure | Performance & fairness validation |
+| Manage | Remediation & monitoring |
 
 ---
 
-# 16. Regulatory Readiness Statement
+# 13. Continuous Improvement
 
-This framework ensures:
+This framework must be reviewed:
 
-- Independent model challenge
-- Documented defensibility
-- Transparent risk assessment
-- Audit traceability
-
-Designed to withstand:
-
-- OCC Examination
-- Federal Reserve Review
-- CFPB Fair Lending Audit
+- Annually
+- After regulatory updates
+- Following model incidents
+- After significant retraining
 
 ---
 
