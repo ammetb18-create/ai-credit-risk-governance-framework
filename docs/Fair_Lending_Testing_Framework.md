@@ -2,24 +2,23 @@
 **AI Credit Risk Governance Framework**  
 Version: 1.0  
 Status: Active  
-Owner: Fair Lending & Compliance Office  
-Last Updated: 2026-03-02  
+Owner: Fair Lending & Model Risk Governance  
+Last Updated: 2026-03-03  
 
 ---
 
 # 1. Purpose
 
-This document defines the methodology, controls, and governance standards for conducting Fair Lending and Bias Testing on AI/ML systems used in credit decisioning.
+This framework establishes a structured methodology to identify, measure, monitor, and mitigate discriminatory risk in AI-driven credit decision systems operating in regulated financial environments.
 
-This framework ensures compliance with:
+It operationalizes fair lending controls in alignment with:
 
 - Equal Credit Opportunity Act (ECOA)
-- Fair Credit Reporting Act (FCRA)
 - Regulation B
-- UDAAP principles
-- NIST AI Risk Management Framework (Measure & Manage Functions)
-
-The objective is to proactively identify, measure, and mitigate disparate impact and discriminatory outcomes in AI-driven credit systems.
+- Fair Housing Act (FHA)
+- Fair Credit Reporting Act (FCRA)
+- CFPB Supervisory Expectations
+- NIST AI Risk Management Framework (Measure & Manage)
 
 ---
 
@@ -27,201 +26,191 @@ The objective is to proactively identify, measure, and mitigate disparate impact
 
 This framework applies to:
 
-- Credit underwriting models
-- Pricing models
+- Credit approval models
+- Risk-based pricing models
 - Credit limit assignment models
-- Application screening systems
-- Collections prioritization models
-- Any AI system influencing credit outcomes
+- Alternative data scoring systems
+- Fraud screening systems that influence credit decisions
+- Prequalification and prescreening AI tools
 
 ---
 
-# 3. Protected Class Considerations
+# 3. Fair Lending Risk Categories
 
-Testing must assess potential disparate impact related to:
+## 3.1 Disparate Treatment
 
-- Race
-- Ethnicity
-- Gender
-- Age
-- National Origin
-- Marital Status
-- Proxy variables (ZIP code, education, income proxies, etc.)
+Intentional or direct discrimination based on protected characteristics.
 
-Where direct protected class data is unavailable, proxy methodologies must be used.
+Control Objective:
+- Ensure no protected attributes are explicitly used in model training or decision logic.
 
 ---
 
-# 4. Fair Lending Testing Components
+## 3.2 Disparate Impact
 
-## 4.1 Disparate Impact Analysis
+Neutral variables that produce statistically significant adverse outcomes for protected classes.
 
-Measure approval rates and outcomes across demographic groups.
-
-### Required Metrics:
-
-- Approval Rate Ratio
-- Denial Rate Ratio
-- Adverse Impact Ratio (80% rule)
-- Statistical significance testing (Chi-square / Z-test)
-
-Threshold:
-
-- Any ratio below 0.80 requires investigation.
+Control Objective:
+- Detect statistically significant disparities in approval rates, pricing, or limits.
 
 ---
 
-## 4.2 Disparate Treatment Review
+## 3.3 Proxy Discrimination
 
-Assess whether similarly situated applicants receive materially different outcomes.
+Use of variables highly correlated with protected characteristics (e.g., ZIP code, behavioral signals).
 
-Requirements:
-
-- Controlled comparative testing
-- Feature impact review
-- Manual override monitoring
+Control Objective:
+- Identify proxy correlations exceeding defined thresholds.
 
 ---
 
-## 4.3 Proxy Variable Analysis
+## 3.4 Algorithmic Drift Bias
 
-Identify features that may indirectly correlate with protected classes.
+Bias introduced post-deployment due to data shifts, macroeconomic change, or retraining cycles.
 
-Examples:
-
-- ZIP Code
-- Employment Gap Indicators
-- Education Level
-- Transaction History Patterns
-
-Testing Methods:
-
-- Correlation analysis
-- SHAP value fairness review
-- Feature importance stability review
+Control Objective:
+- Ongoing fairness monitoring.
 
 ---
 
-## 4.4 Model Explainability Review
+# 4. Testing Methodology
 
-AI models must provide:
+## 4.1 Protected Class Proxy Identification
 
-- Clear adverse action reason codes
-- Consumer-understandable explanations
-- Feature-level contribution transparency
+Where direct protected class data is unavailable:
 
-Accepted Methods:
+- Use BISG (Bayesian Improved Surname Geocoding)
+- Geospatial demographic estimation
+- Statistically validated proxy methodologies
 
-- SHAP
-- LIME
-- Partial Dependence Plots
-
-Black-box models without explainability controls require enhanced governance review.
-
----
-
-# 5. Fairness Risk Scoring
-
-Each model must receive a Fairness Risk Score using:
-
-- Disparate Impact Severity
-- Regulatory Exposure
-- Consumer Harm Potential
-- Model Complexity
-- Explainability Level
-
-Fairness risk must be integrated into:
-
-AI_Credit_Risk_Scoring_Matrix_v1.md
+Documentation Required:
+- Method description
+- Data sources
+- Validation approach
+- Confidence thresholds
 
 ---
 
-# 6. Testing Frequency
+## 4.2 Disparate Impact Analysis
 
-| Risk Tier | Testing Frequency |
-|------------|------------------|
-| Tier 1 (Critical) | Quarterly |
-| Tier 2 (High) | Semi-Annual |
-| Tier 3 (Moderate) | Annual |
-| Tier 4 (Low) | As needed |
+Primary Statistical Metrics:
 
-Additional testing required:
+- Adverse Impact Ratio (AIR)
+- Approval Rate Differential
+- Pricing Differential
+- Confidence Intervals
+- Statistical Significance Testing (p-values)
 
-- After model retraining
-- After data source changes
-- After regulatory updates
+Threshold Standard (example baseline):
 
----
-
-# 7. Escalation Protocol
-
-If fairness thresholds are breached:
-
-1. Immediate compliance notification
-2. Root cause analysis
-3. Legal review
-4. Governance Committee escalation
-5. Model suspension if necessary
-6. Documented remediation plan
-
-All incidents must be logged in:
-
-/fair-lending-incidents/
+- AIR < 0.80 triggers escalation review
 
 ---
 
-# 8. Documentation Requirements
+## 4.3 Feature-Level Bias Testing
 
-Each fairness review must produce:
+For each model feature:
 
-- Statistical test results
-- Dataset description
-- Methodology explanation
-- Identified disparities
-- Mitigation strategy
-- Executive sign-off
+- Correlation analysis with protected proxies
+- SHAP-based fairness contribution analysis
+- Sensitivity testing via feature perturbation
 
-Reports must be stored in:
-
-/fairness-reports/
+Escalation Trigger:
+- Feature materially contributes to disparate impact without business necessity justification
 
 ---
 
-# 9. Governance Accountability
+## 4.4 Explainability & Adverse Action Compliance
 
-Responsible Parties:
+Models must support:
 
-- Model Owner
-- Fair Lending Officer
-- Compliance Team
-- Model Validation Team
-- AI Governance Committee
-
-Final deployment approval requires documented fairness clearance.
+- Reason codes aligned with ECOA requirements
+- Consumer-friendly explanation logic
+- Feature importance traceability
+- Audit-ready documentation
 
 ---
 
-# 10. Alignment to NIST AI RMF
+# 5. Governance Escalation Matrix
+
+| Severity | Description | Required Action |
+|----------|------------|----------------|
+| Low | Minor statistical variance | Document & monitor |
+| Moderate | Statistically significant but explainable disparity | Mitigation plan required |
+| High | Persistent disparity with limited business justification | Governance committee review |
+| Critical | Significant disparate impact with regulatory exposure | Immediate remediation & legal review |
+
+---
+
+# 6. Monitoring Frequency
+
+| Risk Tier | Monitoring Frequency |
+|-----------|--------------------|
+| Tier 1 (Critical Credit Models) | Monthly |
+| Tier 2 (High Impact) | Quarterly |
+| Tier 3 (Operational Models) | Semi-Annual |
+| Tier 4 (Low Risk) | Annual |
+
+---
+
+# 7. Documentation Requirements
+
+Each fairness review cycle must produce:
+
+- Fair Lending Testing Report
+- Statistical output documentation
+- Escalation decision record
+- Mitigation tracking log
+- Governance approval record
+
+All reports must be stored in:
+
+/fair-lending-reviews/
+
+---
+
+# 8. Integration with AI Risk Lifecycle
+
+This framework integrates with:
+
+- Risk Scoring Matrix
+- Model Inventory Register
+- AI Governance Audit Checklist
+- Model Validation Framework
+- Regulatory Alignment Map
+
+---
+
+# 9. Alignment to NIST AI RMF
 
 | AI RMF Function | Implementation |
 |-----------------|---------------|
-| Govern | Defined accountability structure |
-| Map | Protected class risk identification |
+| Govern | Fair lending oversight ownership |
+| Map | Risk identification for protected groups |
 | Measure | Statistical bias testing |
-| Manage | Mitigation & escalation controls |
+| Manage | Mitigation & escalation |
 
 ---
 
-# 11. Regulatory Readiness Statement
+# 10. Regulatory Readiness
 
-This framework is designed to demonstrate:
+This framework ensures readiness for:
 
-- Proactive bias mitigation
-- Documented testing methodology
-- Ongoing monitoring controls
-- Defensible AI decisioning practices
+- CFPB examination
+- OCC supervisory review
+- Federal Reserve model risk review
+- State-level regulatory audits
 
-This document supports regulatory examinations and supervisory reviews.
+---
+
+# 11. Continuous Improvement
+
+The Fair Lending Testing Framework must be reviewed:
+
+- Annually
+- Following major regulatory updates
+- After model incidents
+- After material model retraining
 
 ---
 
