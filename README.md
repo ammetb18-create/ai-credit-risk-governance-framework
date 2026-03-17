@@ -1,42 +1,33 @@
-# AI Credit Risk Governance Framework  
-### Enterprise-Grade AI Governance Architecture for Regulated Credit Decision Systems
+# AI Governance and Credit Risk Framework
 
----
+## Overview
+This project presents an AI Governance and Cybersecurity Risk Framework focused on credit risk systems and AI-driven decision-making.
 
-## Executive Summary
+It aims to provide a structured approach to identifying, assessing, and mitigating risks associated with artificial intelligence in financial and data-driven environments.
 
-The **AI Credit Risk Governance Framework** is a structured, enterprise-grade governance architecture designed to manage, monitor, and mitigate risks associated with Artificial Intelligence systems deployed in automated credit decision environments.
+## Purpose
+As AI systems become increasingly integrated into financial services and decision-making processes, organizations face growing risks related to:
 
-This framework operationalizes regulatory AI governance principles into measurable, auditable, and defensible controls tailored for financial institutions operating under U.S. regulatory supervision.
+- Data security and privacy
+- Model misuse and bias
+- Lack of governance and oversight
+- Regulatory and compliance exposure
 
-It aligns with:
+This framework contributes to safer, more accountable, and more secure AI adoption.
 
-- NIST AI Risk Management Framework (AI RMF 1.0)
-- SR 11-7 Model Risk Management Guidance
-- Equal Credit Opportunity Act (ECOA)
-- Fair Credit Reporting Act (FCRA)
-- CFPB Supervisory Expectations
-- Enterprise Risk Management (ERM) Standards
+## Key Components
+- AI Risk Identification
+- Risk Classification Model
+- Cybersecurity Risk Mapping
+- Governance and Oversight Structure
+- Compliance Considerations
+- Risk Mitigation Controls
 
----
+## Why This Matters
+AI systems are not only technical tools — they are risk-bearing systems that require governance, security, and accountability.
 
-## Problem Statement
+This project aligns with the need for responsible AI deployment, particularly in high-risk environments such as financial systems.
 
-As AI-driven credit underwriting, scoring, and risk assessment systems become increasingly embedded in financial infrastructure, institutions face rising exposure to:
-
-- Algorithmic discrimination risk
-- Proxy bias in credit models
-- Regulatory non-compliance
-- Model drift and performance degradation
-- Operational and reputational risk
-- Lack of explainability in automated decisions
-
-While NIST AI RMF provides high-level guidance, financial institutions require implementation-ready governance artifacts that translate principles into enforceable control structures.
-
-This repository provides that operational layer.
-
----
-
-## Framework Architecture
-
-The framework is structured into modular governance components:
+## Author
+America Trujillo  
+AI Governance | Cybersecurity Risk | Compliance
