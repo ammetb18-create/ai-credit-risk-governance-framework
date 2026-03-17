@@ -45,7 +45,7 @@ This project includes a technical whitepaper focused on mitigating algorithmic b
 
 This project is supported by a video explaining the relationship between AI governance and cybersecurity risk:
 
-🎥 [Watch Video](PUT_YOUR_YOUTUBE_LINK_HERE)
+🎥 [Watch Video]](https://www.youtube.com/watch?v=4FGnM_XrJ3w)
 
 ---
 
