@@ -2,11 +2,11 @@
 
 ## Overview
 
-This project presents a structured AI governance and cybersecurity risk framework focused on automated credit decision systems.
+This work develops a structured AI governance and cybersecurity risk framework focused on automated credit decision systems.
 
-As artificial intelligence is increasingly adopted in financial services, organizations face growing risks related to algorithmic bias, data security, lack of oversight, and regulatory compliance.
+As artificial intelligence is increasingly adopted in financial services, organizations face growing risks related to algorithmic bias, data security, lack of oversight, and regulatory non-compliance.
 
-This project translates the NIST AI Risk Management Framework (AI RMF) into a practical methodology that enables organizations to identify, assess, and mitigate risks in AI-driven environments.
+This framework translates the NIST AI Risk Management Framework (AI RMF) into a practical and implementable methodology that enables organizations to identify, assess, and mitigate risks in AI-driven financial environments.
 
 ---
 
@@ -33,6 +33,32 @@ The purpose of this framework is to support secure, fair, and compliant AI deplo
 
 ---
 
+## Author Contribution
+
+This framework was independently developed by America del Carmen Trujillo Bonilla as part of her professional focus on AI governance, cybersecurity risk, and regulatory compliance.
+
+The project reflects her specialization in responsible AI systems and financial risk management within regulated environments.
+
+---
+
+## Relation to Proposed Endeavor
+
+This project directly supports the applicant’s proposed endeavor of developing AI Risk & Compliance Advisory solutions for organizations operating in regulated environments.
+
+It demonstrates the ability to design structured methodologies for AI governance, risk assessment, and regulatory alignment.
+
+---
+
+## National Importance
+
+This work contributes to strengthening the security, transparency, and regulatory compliance of artificial intelligence systems used in financial decision-making within the United States.
+
+As AI adoption increases in critical sectors such as banking and fintech, this framework supports the mitigation of systemic risks, including algorithmic bias, cybersecurity vulnerabilities, and regulatory non-compliance.
+
+This project aligns with U.S. national priorities in cybersecurity, financial system stability, and responsible AI governance.
+
+---
+
 ## Whitepaper
 
 This project includes a technical whitepaper focused on mitigating algorithmic bias in AI-driven credit systems.
@@ -45,7 +71,7 @@ This project includes a technical whitepaper focused on mitigating algorithmic b
 
 This project is supported by a video explaining the relationship between AI governance and cybersecurity risk:
 
-🎥 [Watch Video]](https://www.youtube.com/watch?v=4FGnM_XrJ3w)
+🎥 [Watch Video](https://www.youtube.com/watch?v=4FGnM_XrJ3w)
 
 ---
 
@@ -54,18 +80,10 @@ This project is supported by a video explaining the relationship between AI gove
 AI systems are not only technical tools — they are risk-bearing systems that require governance, security, and accountability.
 
 This work contributes to improving fairness, strengthening compliance, and supporting responsible AI deployment in the United States, particularly in financial systems and high-risk environments.
-## National Importance
-
-This work contributes to strengthening the security, transparency, and regulatory compliance of artificial intelligence systems used in financial decision-making within the United States.
-
-As AI adoption increases in critical sectors such as banking and fintech, this framework supports the mitigation of systemic risks, including algorithmic bias, cybersecurity vulnerabilities, and regulatory non-compliance.
-
-This project aligns with U.S. national priorities in cybersecurity, financial system stability, and responsible AI governance.
-
 
 ---
 
 ## Author
 
-America Trujillo  
+America del Carmen Trujillo Bonilla  
 AI Governance | Cybersecurity Risk | Compliance
