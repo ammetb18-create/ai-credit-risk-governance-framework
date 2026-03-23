@@ -1,62 +1,135 @@
-# AI Governance and Cybersecurity Risk Framework for AI-Driven Credit Systems
+# AI Credit Risk Governance Framework  
+### Enterprise-Level AI Governance & Compliance Architecture for U.S. Financial Systems
+
+
 
 ## Overview
-This work develops a structured AI governance and cybersecurity risk framework focused on AI-driven credit decision systems.
 
-As artificial intelligence continues to be integrated into financial services, organizations face increasing risks related to algorithmic bias, data security, lack of governance, and regulatory non-compliance.
+The **AI Credit Risk Governance Framework** is a structured and implementation-oriented system designed to address the growing risks associated with artificial intelligence in credit decision-making and financial systems.
 
-This framework operationalizes the NIST AI Risk Management Framework (AI RMF) into a practical and implementable methodology that enables organizations to identify, assess, and mitigate risks in AI-based financial environments.
+This framework provides organizations with a practical methodology to **identify, assess, govern, and monitor risks** related to AI-driven models, particularly in highly regulated environments such as banking and financial services.
+
+The framework is aligned with U.S. regulatory expectations and emerging standards in AI governance, cybersecurity, and financial compliance.
+
+
 
 ## Purpose
-The purpose of this framework is to support secure, fair, and compliant AI deployment in financial systems by addressing key risk areas, including:
 
-- Algorithmic bias in credit decision-making
-- Data security and privacy risks
-- Lack of governance and accountability
-- Regulatory and compliance exposure
+Artificial intelligence is increasingly used in credit scoring, underwriting, fraud detection, and financial risk modeling. However, these systems introduce critical risks, including:
 
-## Key Components
-- AI Risk Identification and Classification
-- Mapping to NIST AI RMF (Govern, Map, Measure, Manage)
-- Risk Assessment Model (Likelihood, Impact, Detectability)
-- Cybersecurity Risk Integration
-- Governance and Oversight Structures
-- Risk Mitigation Controls
-- Monitoring and Compliance Framework
+- Algorithmic bias affecting access to credit  
+- Lack of transparency in automated decisions  
+- Regulatory non-compliance  
+- Cybersecurity vulnerabilities in AI-integrated environments  
 
-## Author Contribution
-This framework was independently developed by America del Carmen Trujillo Bonilla as part of her professional focus on AI governance, cybersecurity risk, and regulatory compliance.
+This framework is designed to mitigate these risks and support:
 
-The project reflects her specialization in responsible AI systems, risk governance, and financial system compliance within regulated environments.
+- Fair and compliant AI-driven decision-making  
+- Regulatory alignment with U.S. laws  
+- Risk transparency and auditability  
+- Responsible and secure AI deployment  
 
-## Relation to Proposed Endeavor
-This project directly supports the applicant’s proposed endeavor of developing AI Risk & Compliance Advisory solutions for organizations operating in regulated environments.
 
-It demonstrates the capability to design structured governance methodologies, risk assessment models, and regulatory alignment strategies for AI-driven systems in critical sectors.
+
+## Core Components
+
+The framework is structured into five key components:
+
+### 1. AI Risk Identification
+- Detection of AI system risks and data exposure  
+- Classification of model types and use cases  
+
+### 2. Algorithmic Risk Assessment
+- Evaluation of bias, probability, and impact  
+- Risk scoring methodologies  
+
+### 3. Governance & Compliance Alignment
+- Mapping AI systems to regulatory requirements  
+- Alignment with:
+  - Equal Credit Opportunity Act (ECOA)  
+  - Fair Credit Reporting Act (FCRA)  
+  - SR 11-7 Model Risk Management Guidance  
+  - NIST AI Risk Management Framework (AI RMF)  
+
+### 4. Bias Mitigation & Control
+- Implementation of fairness controls  
+- Reduction of discriminatory outcomes  
+
+### 5. Continuous Monitoring & Reporting
+- Ongoing model performance tracking  
+- Compliance reporting and audit readiness  
+
+
+
+## Practical Use Case (U.S. Financial Institution)
+
+Example: AI Credit Scoring System
+
+1. Identify the AI model used for credit decision-making  
+2. Classify the level of risk based on model impact  
+3. Evaluate potential bias affecting protected classes  
+4. Align the model with ECOA and FCRA requirements  
+5. Implement controls and monitoring systems  
+6. Generate audit-ready documentation  
+
+This process enables institutions to ensure **regulatory compliance, fairness, and risk control** in AI-driven credit systems.
+
+
+
+## Regulatory Alignment
+
+This framework is specifically designed for applicability within the United States and aligns with:
+
+- Equal Credit Opportunity Act (ECOA)  
+- Fair Credit Reporting Act (FCRA)  
+- Model Risk Management (SR 11-7)  
+- NIST AI Risk Management Framework (AI RMF)  
+
+These standards are critical for ensuring **legal compliance, consumer protection, and financial system stability**.
+
+
 
 ## National Importance
-This work contributes to strengthening the security, transparency, and regulatory compliance of artificial intelligence systems used in financial decision-making within the United States.
 
-As AI adoption expands across critical sectors such as banking and fintech, this framework supports the mitigation of systemic risks, including algorithmic bias, cybersecurity vulnerabilities, and regulatory non-compliance.
+The rapid adoption of artificial intelligence in financial systems presents systemic risks that directly impact:
 
-This project aligns with U.S. national priorities in cybersecurity, financial system resilience, and responsible AI governance.
+- Access to credit and financial inclusion  
+- Consumer protection and anti-discrimination enforcement  
+- Stability of financial institutions  
+- Public trust in automated systems  
 
-## Alignment with U.S. Standards
-- NIST AI Risk Management Framework (AI RMF)
-- Model Risk Management principles (SR 11-7)
-- U.S. financial regulatory expectations for AI and data-driven systems
+This framework contributes to addressing these risks by providing a structured approach to **AI governance, compliance, and risk mitigation**, supporting the responsible deployment of AI technologies in the United States.
 
-## Whitepaper
-This project includes a technical whitepaper addressing algorithmic bias mitigation in AI-driven credit systems.
 
-## Video Explanation
-This project is supported by a conceptual explanation of the relationship between AI governance and cybersecurity risk.
-
-## Why This Matters
-AI systems are not only technical tools — they are risk-bearing systems that require governance, security, and accountability.
-
-This work contributes to improving fairness, strengthening compliance, and supporting responsible AI deployment in the United States, particularly in financial systems and high-risk environments.
 
 ## Author
-America del Carmen Trujillo Bonilla  
-AI Governance | Cybersecurity Risk | Compliance
+
+**América del Carmen Trujillo Bonilla**  
+AI Governance | Cybersecurity | Regulatory Compliance  
+
+This project is part of an ongoing professional initiative focused on **AI Risk & Compliance Advisory**, aimed at strengthening AI governance and cybersecurity practices in regulated environments.
+
+
+
+## Status
+
+Active development and continuous improvement.  
+This framework is being expanded through ongoing research, technical documentation, and applied analysis.
+
+
+
+## Repository Structure
+
+- `/docs` → Core framework documentation  
+- Risk taxonomy  
+- Governance models  
+- Compliance mapping  
+- Audit structures  
+
+
+
+## Disclaimer
+
+This framework is intended for educational, analytical, and advisory purposes. Organizations should adapt implementation according to their regulatory and operational requirements.
+
+
