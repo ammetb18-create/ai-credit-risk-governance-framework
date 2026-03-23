@@ -132,4 +132,6 @@ This framework is being expanded through ongoing research, technical documentati
 
 This framework is intended for educational, analytical, and advisory purposes. Organizations should adapt implementation according to their regulatory and operational requirements.
 
+AMERICA DEL CARMEN TRUJILLO BONILLA 
+
 
